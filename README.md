@@ -7,11 +7,11 @@
 
 ## 📊 项目简介
 
-HermitongDashboard 是一个自动化交易数据处理和可视化分析系统,帮助交易者轻松管理和分析交易记录。
+HermitongDashboard 是一个自动化交易数据处理和可视化分析系统,专门为**长桥证券**(Longbridge)用户设计,帮助交易者轻松管理和分析交易记录。
 
 ### 核心功能
 
-- 🔄 **自动数据清洗**: 从券商导出的 Excel 文件中自动提取和清洗交易数据
+- 🔄 **自动数据清洗**: 从长桥证券导出的 Excel 文件中自动提取和清洗交易数据
 - 📈 **FIFO 计算**: 采用先进先出算法精确计算持仓成本和已实现盈亏
 - ☁️ **云端存储**: 自动上传至 Google Sheets,随时随地访问
 - 📊 **可视化分析**: 通过 Looker Studio 创建专业的交易分析仪表盘
@@ -20,7 +20,7 @@ HermitongDashboard 是一个自动化交易数据处理和可视化分析系统,
 ### 系统架构
 
 ```
-Excel 交易记录 → Python 数据清洗 → Google Sheets → Looker 仪表盘
+长桥证券交易记录 → Python 数据清洗 → Google Sheets → Looker 仪表盘
 ```
 
 ## 🚀 快速开始
@@ -29,7 +29,7 @@ Excel 交易记录 → Python 数据清洗 → Google Sheets → Looker 仪表�
 
 - Python 3.7+
 - Google 账号
-- 券商交易记录 Excel 文件
+- 长桥证券账号和交易记录
 
 ### 安装步骤
 
@@ -55,8 +55,9 @@ Excel 交易记录 → Python 数据清洗 → Google Sheets → Looker 仪表�
    - 将 Sheet 共享给服务账号邮箱(在 `credentials.json` 中查找)
 
 5. **准备交易数据**
-   - 创建 `TradeRecord` 文件夹
-   - 将交易记录 Excel 文件放入该文件夹
+   - 从长桥证券电脑端导出交易记录
+   - 点击 **"资产"** → **"历史订单"** → **"导出"** → 勾选 **"包含订单明细"**
+   - 将导出的 Excel 文件放入 `TradeRecord` 文件夹
 
 6. **运行脚本**
    ```bash
